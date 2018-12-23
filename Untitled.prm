@@ -1,0 +1,18 @@
+PROMGEN: Xilinx Prom Generator P.20131013
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o "D:\Autosave Carino\Documents\XILINX\Dino-Run-master\Dino\//Untitled" -x xcf02s -u 00000000 "D:/Autosave Carino/Documents/XILINX/Dino-Run-master/Dino/main.bit" "D:/Autosave Carino/Documents/XILINX/Dino-Run-master/Dino/main.bit" 
+
+PROM D:\Autosave Carino\Documents\XILINX\Dino-Run-master\Dino\Untitled.prm map: Mon Dec 24 05:52:22 2018
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          256K
+PROM start    0000:0000
+PROM end      0003:ffff
+PROM checksum 01f662b3
+
+        Addr1        Addr2                     Date File(s)
+    0000:0000    0002:380b     Dec 24 05:47:33 2018 D:/Autosave Carino/Documents/XILINX/Dino-Run-master/Dino/main.bit
+                               Dec 24 05:47:33 2018 D:/Autosave Carino/Documents/XILINX/Dino-Run-master/Dino/main.bit

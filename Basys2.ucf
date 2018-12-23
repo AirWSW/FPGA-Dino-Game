@@ -1,0 +1,54 @@
+// connect master clock
+net clk loc = B8; // MCLK 50MHz clk
+
+// connect keys
+net clr loc = A7; // BTN3
+net restart loc = M4; // BTN2
+net key loc = C11; // BTN1
+net jump loc = G12; // BTN0
+
+// connect switchs
+// net x[7] loc = N3; // SW7
+// net x[6] loc = E2; // SW6
+// net x[5] loc = F3; // SW5
+// net x[4] loc = G3; // SW4
+// net x[3] loc = B4; // SW3
+// net x[2] loc = K3; // SW2
+// net x[1] loc = L3; // SW1
+// net x[0] loc = P11; // SW0
+
+// connect LEDs
+// net y[7] loc  =  G1; // LD7
+// net y[6] loc  =  P4; // LD6
+// net y[5] loc  =  N4; // LD5
+// net y[4] loc  =  N5; // LD4
+// net y[3] loc  =  P6; // LD3
+// net y[2] loc  =  P7; // LD2
+// net y[1] loc  =  M11; // LD1
+// net y[0] loc  =  M5; // LD0
+
+// connect 7-segment display
+net seg[6] loc = L14; // CA
+net seg[5] loc = H12; // CB
+net seg[4] loc = N14; // CC
+net seg[3] loc = N11; // CD
+net seg[2] loc = P12; // CE
+net seg[1] loc = L13; // CF
+net seg[0] loc = M12; // CG
+net an[3] loc = K14; // AN3
+net an[2] loc = M13; // AN2
+net an[1] loc = J12; // AN1
+net an[0] loc = F12; // AN0
+net dp loc = N13; // DP
+
+// connect VGA display
+net red[0] loc = C14; // RED0
+net red[1] loc = D13; // RED1
+net red[2] loc = F13; // RED2
+net green[0] loc = F14; // GRN0
+net green[1] loc = G13; // GRN1
+net green[2] loc = G14; // GRN2
+net blue[0] loc = H13; // BLU0
+net blue[1] loc = J13; // BLU1
+net hsync loc = J14; // HSYNC
+net vsync loc = K13; // VSYNC

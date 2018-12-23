@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=D:\Autosave Carino\Documents\XILINX\Dino-Run-master\Dino\impact.xsl
+OUTFILE=D:\Autosave Carino\Documents\XILINX\Dino-Run-master\Dino\impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=D:\Autosave Carino\Documents\XILINX\Dino-Run-master\Dino
+LICENSE=iMPACT
+USER_INFO=iMPACT

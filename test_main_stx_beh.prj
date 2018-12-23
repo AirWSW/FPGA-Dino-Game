@@ -1,0 +1,7 @@
+verilog isim_temp "vga_disp_dino.v"
+verilog isim_temp "seg_disp.v"
+verilog isim_temp "game_cont.v"
+verilog isim_temp "clockdiv.v"
+verilog isim_temp "main.v"
+verilog isim_temp "test_main.v"
+verilog isim_temp "D:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

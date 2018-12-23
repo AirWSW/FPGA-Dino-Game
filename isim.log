@@ -1,0 +1,26 @@
+ISim log file
+Running: D:\Autosave Carino\Documents\XILINX\Dino-Run-master\Dino\test_main_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/Autosave Carino/Documents/XILINX/Dino-Run-master/Dino/test_main_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 100ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 23378290 ns : File "D:/Autosave Carino/Documents/XILINX/Dino-Run-master/Dino/game_cont.v" Line 118
+# restart
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 122669070 ns : File "D:/Autosave Carino/Documents/XILINX/Dino-Run-master/Dino/game_cont.v" Line 102
+# restart
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 85518 us : File "D:/Autosave Carino/Documents/XILINX/Dino-Run-master/Dino/test_main.v" Line 83

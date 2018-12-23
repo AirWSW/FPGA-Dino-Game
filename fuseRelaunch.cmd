@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "D:/Autosave Carino/Documents/XILINX/Dino-Run-master/Dino/test_main_isim_beh.exe" -prj "D:/Autosave Carino/Documents/XILINX/Dino-Run-master/Dino/test_main_beh.prj" "work.test_main" "work.glbl" 

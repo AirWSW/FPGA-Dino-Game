@@ -1,0 +1,190 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date:    21:53:13 11/21/2018 
+// Design Name: 
+// Module Name:    vga_disp 
+// Project Name: 
+// Target Devices: 
+// Tool versions: 
+// Description: 
+//
+// Dependencies: 
+//
+// Revision: 
+// Revision 0.01 - File Created
+// Additional Comments: 
+//
+//////////////////////////////////////////////////////////////////////////////////
+module vga_disp_dino(
+
+	input wire vgaclk, // pixel clock: 25MHz
+	
+	input wire clr, // asynchronous reset
+	
+	// input [9:0] dino_h,
+	// input [9:0] dino_v,
+	// input [9:0] obstacle_h,
+	// input [9:0] obstacle_v,
+	// input [9:0] cloud_v,
+	// input [9:0] cloud_h,
+	// input [9:0] enemy_h,
+	// input [9:0] enemy_v,
+	// input [7:0] obstacle_height,
+	// input [7:0] obstacle_width,
+	// input [7:0] enemy_height,
+	// input [7:0] enemy_width,
+	// input [3:0] score3, // add ons start here
+	// input [3:0] score2,
+	// input [3:0] score1,
+	// input [3:0] score0,
+	// input alive, // add ons end here
+
+	output reg [2:0] red, // red vga output - 3 bits
+	output reg [2:0] green, // green vga output - 3 bits
+	output reg [1:0] blue, // blue vga output - 2 bits
+	output wire hsync, // horizontal sync output
+	output wire vsync  // vertical sync output
+	);
+
+// video structure constants 640*480@60Hz, 25.125MHz
+parameter hpixels = 800; // 800;// horizontal pixels per line
+parameter vlines = 525; // 525; // vertical lines per frame
+
+parameter hpulse = 2; // 96; 	// hsync pulse length
+parameter vpulse = 96; // 2; 	// vsync pulse length
+
+parameter hbp = 144; // 144; 	// end of horizontal back porch
+parameter hfp = 784; // 784; 	// beginning of horizontal front porch
+
+parameter vbp = 35; // 35; 		// end of vertical back porch
+parameter vfp = 515; // 515; 	// beginning of vertical front porch
+// active horizontal video is therefore: 784 - 144 = 640
+// active vertical video is therefore: 511 - 31 = 480
+
+// dino constants
+parameter dino_h = 100;
+parameter dino_v = 100;
+parameter dino_size = 40;
+
+parameter obstacle_h = 200;
+parameter obstacle_v = 200;
+parameter obstacle_height = 40;
+parameter obstacle_width = 440;
+
+parameter cloud_h = 300;
+parameter cloud_v = 300;
+parameter cloud_height = 40;
+parameter cloud_width = 80;
+
+parameter enemy_h = 400;
+parameter enemy_v = 400;
+parameter enemy_height = 300;
+parameter enemy_width = 200;
+
+
+// registers for storing the horizontal & vertical counters
+reg [9:0] intHcnt;
+reg [9:0] intVcnt;
+
+// Horizontal & vertical counters --
+// this is how we keep track of where we are on the screen.
+// ------------------------
+// Sequential "always block", which is a block that is
+// only triggered on signal transitions or "edges".
+// posedge = rising edge  &  negedge = falling edge
+// Assignment statements can only be used on type "reg" and need to be of the "non-blocking" type: <=
+always @(posedge vgaclk or posedge clr) begin
+	// reset condition
+	if (clr == 1) begin
+		intHcnt <= 0;
+		intVcnt <= 0;
+	end
+	else begin
+		// keep counting until the end of the line
+		if (intHcnt < hpixels)
+			intHcnt <= intHcnt + 1;
+		else begin
+		// When we hit the end of the line, reset the horizontal
+		// counter and increment the vertical counter.
+		// If vertical counter is at the end of the frame, then
+		// reset that one too.
+			intHcnt <= 0;
+			if (intVcnt < vlines)
+				intVcnt <= intVcnt + 1;
+			else
+				intVcnt <= 0;
+		end
+	end
+end
+
+// generate sync pulses (active low)
+// ----------------
+// "assign" statements are a quick way to
+// give values to variables of type: wire
+assign hsync = (intHcnt < hpulse) ? 0:1;
+assign vsync = (intVcnt < vpulse) ? 0:1;
+
+// display 100% saturation colorbars
+// ------------------------
+// Combinational "always block", which is a block that is
+// triggered when anything in the "sensitivity list" changes.
+// The asterisk implies that everything that is capable of triggering the block
+// is automatically included in the sensitivty list.  In this case, it would be
+// equivalent to the following: always @(intHcnt, intVcnt)
+// Assignment statements can only be used on type "reg" and should be of the "blocking" type: =
+always @(*)
+begin
+	if (1) begin
+		if (intVcnt >= vbp && intVcnt < vfp && intHcnt >= hbp && intHcnt < hfp) begin
+			// ground first
+			if (intVcnt >= (vfp - 20) && intVcnt < vfp && intHcnt >= hbp && intHcnt < hfp) begin
+				red = 3'b111;
+				green = 3'b111;
+				blue = 2'b11;
+			end
+			// else if (intVcnt >= (vbp + obstacle_v) && intVcnt < (vbp + obstacle_v + obstacle_size))
+			// dino display
+			else begin// vbp is top increaseing down to vfp
+				// now display different colors every 80 pixels
+				// while we're within the active horizontal range
+				// -----------------
+				// display green bar
+				if (intVcnt >= (vbp + dino_v) && intVcnt < (vbp + dino_v + dino_size) && intHcnt >= (dino_h + hbp) && intHcnt < (dino_h + hbp + dino_size)) begin
+					red = 3'b111;
+					green = 3'b111;
+					blue = 2'b11;
+				end
+				else if (intVcnt >= (vbp + obstacle_v) && intVcnt < (vbp + obstacle_v + obstacle_height) && intHcnt >= (obstacle_h + hbp) && intHcnt < (obstacle_h + hbp + obstacle_width)) begin
+					red = 3'b000;
+					green = 3'b111;
+					blue = 2'b01;
+				end
+				else if (intVcnt >= (vbp + cloud_v) && intVcnt < (vbp + cloud_v + cloud_height) && intHcnt >= (cloud_h + hbp) && intHcnt < (cloud_h + hbp + cloud_width)) begin
+					red = 3'b111;
+					green = 3'b111;
+					blue = 2'b00;
+				end
+				else if (intVcnt >= (vbp + enemy_v) && intVcnt < (vbp + enemy_v + enemy_height) && intHcnt >= (enemy_h + hbp) && intHcnt < (enemy_h + hbp + enemy_width)) begin
+					red = 3'b111;
+					green = 3'b000;
+					blue = 2'b00;
+				end
+				else begin
+					red = 3'b000;
+					green = 3'b000;
+					blue = 2'b00;
+				end
+			end
+		end
+	end
+	else begin
+		red = 3'b000;
+		green = 3'b000;
+		blue = 2'b00;
+	end
+end
+
+endmodule

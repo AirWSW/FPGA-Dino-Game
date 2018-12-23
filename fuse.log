@@ -1,0 +1,32 @@
+Running: D:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o D:/Autosave Carino/Documents/XILINX/Dino-Run-master/Dino/test_main_isim_beh.exe -prj D:/Autosave Carino/Documents/XILINX/Dino-Run-master/Dino/test_main_beh.prj work.test_main work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "D:/Autosave Carino/Documents/XILINX/Dino-Run-master/Dino/vga_disp_dino.v" into library work
+WARNING:HDLCompiler:327 - "D:/Autosave Carino/Documents/XILINX/Dino-Run-master/Dino/vga_disp_dino.v" Line 312: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:327 - "D:/Autosave Carino/Documents/XILINX/Dino-Run-master/Dino/vga_disp_dino.v" Line 326: Concatenation with unsized literal; will interpret as 32 bits
+Analyzing Verilog file "D:/Autosave Carino/Documents/XILINX/Dino-Run-master/Dino/seg_disp.v" into library work
+Analyzing Verilog file "D:/Autosave Carino/Documents/XILINX/Dino-Run-master/Dino/game_cont.v" into library work
+Analyzing Verilog file "D:/Autosave Carino/Documents/XILINX/Dino-Run-master/Dino/clockdiv.v" into library work
+Analyzing Verilog file "D:/Autosave Carino/Documents/XILINX/Dino-Run-master/Dino/main.v" into library work
+Analyzing Verilog file "D:/Autosave Carino/Documents/XILINX/Dino-Run-master/Dino/test_main.v" into library work
+Analyzing Verilog file "D:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:327 - "D:/Autosave Carino/Documents/XILINX/Dino-Run-master/Dino/vga_disp_dino.v" Line 312: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:327 - "D:/Autosave Carino/Documents/XILINX/Dino-Run-master/Dino/vga_disp_dino.v" Line 326: Concatenation with unsized literal; will interpret as 32 bits
+Completed static elaboration
+Compiling module clockdiv
+Compiling module game_cont
+Compiling module seg_disp
+Compiling module vga_disp_dino
+Compiling module main
+Compiling module test_main
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: 系统找不到指定的路径。, "isim\test_main_isim_beh.exe.sim\libPortability.dll".
+Compiled 7 Verilog Units
+Built simulation executable D:/Autosave Carino/Documents/XILINX/Dino-Run-master/Dino/test_main_isim_beh.exe
+Fuse Memory Usage: 30940 KB
+Fuse CPU Usage: 624 ms

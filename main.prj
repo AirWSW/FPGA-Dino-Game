@@ -1,0 +1,5 @@
+verilog work "vga_disp_dino.v"
+verilog work "seg_disp.v"
+verilog work "game_cont.v"
+verilog work "clockdiv.v"
+verilog work "main.v"

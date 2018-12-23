@@ -1,0 +1,12 @@
+# PROMGEN: Xilinx Prom Generator P.20131013
+# Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+SOFTWARE_VERSION P.20131013
+DATE            12/24/2018 - 05:52
+SOURCE          D:\Autosave Carino\Documents\XILINX\Dino-Run-master\Dino\Untitled.mcs
+DEVICE          XCF02S
+DATA_WIDTH      8
+FILL_DATA       0xFF
+SIGNATURE       0x01F662B3
+START_ADDRESS   0x00000000 END_ADDRESS 0x0002380B DIRECTION_UP   "D:/Autosave Carino/Documents/XILINX/Dino-Run-master/Dino/main.bit" 3s100ecp132
+                                                                 "D:/Autosave Carino/Documents/XILINX/Dino-Run-master/Dino/main.bit" 3s100ecp132
