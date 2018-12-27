@@ -5,14 +5,14 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Mon Dec 24 05:46:30 2018">
+  <application stringID="Xst" timeStamp="Thu Dec 27 14:55:38 2018">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="Path"/>
-          <item stringID="value" value="D:\Xilinx\14.7\ISE_DS\ISE\\lib\nt64;D:\Xilinx\14.7\ISE_DS\ISE\\bin\nt64;D:\XILINX\14.7\ISE_DS\ISE\bin\nt64;D:\XILINX\14.7\ISE_DS\ISE\lib\nt64;D:\XILINX\14.7\ISE_DS\ISE\..\..\..\DocNav;D:\XILINX\14.7\ISE_DS\PlanAhead\bin;D:\XILINX\14.7\ISE_DS\EDK\bin\nt64;D:\XILINX\14.7\ISE_DS\EDK\lib\nt64;D:\XILINX\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;D:\XILINX\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;D:\XILINX\14.7\ISE_DS\EDK\gnuwin\bin;D:\XILINX\14.7\ISE_DS\EDK\gnu\arm\nt\bin;D:\XILINX\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;D:\XILINX\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;D:\XILINX\14.7\ISE_DS\common\bin\nt64;D:\XILINX\14.7\ISE_DS\common\lib\nt64;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\MATLAB\R2018b\runtime\win64;C:\Program Files\MATLAB\R2018b\bin;C:\Users\AirWSW\AppData\Local\Microsoft\WindowsApps;C:\Users\AirWSW\AppData\Local\Programs\Microsoft VS Code\bin"/>
+          <item stringID="value" value="D:\Xilinx\14.7\ISE_DS\ISE\\lib\nt64;D:\Xilinx\14.7\ISE_DS\ISE\\bin\nt64;D:\XILINX\14.7\ISE_DS\ISE\bin\nt64;D:\XILINX\14.7\ISE_DS\ISE\lib\nt64;D:\XILINX\14.7\ISE_DS\ISE\..\..\..\DocNav;D:\XILINX\14.7\ISE_DS\PlanAhead\bin;D:\XILINX\14.7\ISE_DS\EDK\bin\nt64;D:\XILINX\14.7\ISE_DS\EDK\lib\nt64;D:\XILINX\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;D:\XILINX\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;D:\XILINX\14.7\ISE_DS\EDK\gnuwin\bin;D:\XILINX\14.7\ISE_DS\EDK\gnu\arm\nt\bin;D:\XILINX\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;D:\XILINX\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;D:\XILINX\14.7\ISE_DS\common\bin\nt64;D:\XILINX\14.7\ISE_DS\common\lib\nt64;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\MATLAB\R2018b\runtime\win64;C:\Program Files\MATLAB\R2018b\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\Wolfram Research\WolframScript\;C:\Users\AirWSW\AppData\Local\Microsoft\WindowsApps;C:\Users\AirWSW\AppData\Local\Programs\Microsoft VS Code\bin"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
@@ -176,23 +176,23 @@
         <item stringID="XST_IOS" value="28"/>
       </section>
       <section stringID="XST_CELL_USAGE">
-        <item dataType="int" stringID="XST_BELS" value="2673">
+        <item dataType="int" stringID="XST_BELS" value="2679">
           <item dataType="int" stringID="XST_GND" value="1"/>
-          <item dataType="int" stringID="XST_INV" value="73"/>
+          <item dataType="int" stringID="XST_INV" value="74"/>
           <item dataType="int" stringID="XST_LUT1" value="175"/>
-          <item dataType="int" stringID="XST_LUT2" value="173"/>
-          <item dataType="int" stringID="XST_LUT2D" value="17"/>
-          <item dataType="int" stringID="XST_LUT2L" value="14"/>
-          <item dataType="int" stringID="XST_LUT3" value="312"/>
-          <item dataType="int" stringID="XST_LUT3D" value="16"/>
-          <item dataType="int" stringID="XST_LUT3L" value="19"/>
-          <item dataType="int" stringID="XST_LUT4" value="767"/>
-          <item dataType="int" stringID="XST_LUT4D" value="44"/>
-          <item dataType="int" stringID="XST_LUT4L" value="97"/>
+          <item dataType="int" stringID="XST_LUT2" value="171"/>
+          <item dataType="int" stringID="XST_LUT2D" value="16"/>
+          <item dataType="int" stringID="XST_LUT2L" value="15"/>
+          <item dataType="int" stringID="XST_LUT3" value="315"/>
+          <item dataType="int" stringID="XST_LUT3D" value="15"/>
+          <item dataType="int" stringID="XST_LUT3L" value="17"/>
+          <item dataType="int" stringID="XST_LUT4" value="772"/>
+          <item dataType="int" stringID="XST_LUT4D" value="43"/>
+          <item dataType="int" stringID="XST_LUT4L" value="96"/>
           <item dataType="int" stringID="XST_MULTAND" value="2"/>
           <item dataType="int" stringID="XST_MUXCY" value="401"/>
-          <item dataType="int" stringID="XST_MUXF5" value="175"/>
-          <item dataType="int" stringID="XST_MUXF6" value="49"/>
+          <item dataType="int" stringID="XST_MUXF5" value="180"/>
+          <item dataType="int" stringID="XST_MUXF6" value="48"/>
           <item dataType="int" stringID="XST_MUXF7" value="24"/>
           <item dataType="int" stringID="XST_MUXF8" value="8"/>
           <item dataType="int" stringID="XST_VCC" value="1"/>
@@ -221,9 +221,9 @@
     </section>
     <section stringID="XST_DEVICE_UTILIZATION_SUMMARY">
       <item stringID="XST_SELECTED_DEVICE" value="3s100ecp132-4"/>
-      <item AVAILABLE="960" dataType="int" label="Number of Slices" stringID="XST_NUMBER_OF_SLICES" value="902"/>
+      <item AVAILABLE="960" dataType="int" label="Number of Slices" stringID="XST_NUMBER_OF_SLICES" value="903"/>
       <item AVAILABLE="1920" dataType="int" label="Number of Slice Flip Flops" stringID="XST_NUMBER_OF_SLICE_FLIP_FLOPS" value="306"/>
-      <item AVAILABLE="1920" dataType="int" label="Number of 4 input LUTs" stringID="XST_NUMBER_OF_4_INPUT_LUTS" value="1707"/>
+      <item AVAILABLE="1920" dataType="int" label="Number of 4 input LUTs" stringID="XST_NUMBER_OF_4_INPUT_LUTS" value="1709"/>
       <item dataType="int" label="Number of IOs" stringID="XST_NUMBER_OF_IOS" value="28"/>
       <item AVAILABLE="83" dataType="int" label="Number of bonded IOBs" stringID="XST_NUMBER_OF_BONDED_IOBS" value="27"/>
       <item AVAILABLE="24" dataType="int" label="Number of GCLKs" stringID="XST_NUMBER_OF_GCLKS" value="2"/>

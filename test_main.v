@@ -72,10 +72,12 @@ module test_main;
 		// Add stimulus here
 		clr = 0;#100;
 		clr = 1;#20000000;
-		clr = 0;#20000000;
+		clr = 0;#200000000;
 		jump = 1;#20000000;
-		jump = 0;#20000000;
-		//jump = 1;#20000000;
+		jump = 0;#200000000;
+		jump = 1;#20000000;
+		jump = 0;#200000000;
+		jump = 1;#20000000;
 		jump = 0;
 		
 	end
