@@ -1,2 +1,2 @@
 # FPGA-Dino-Game
-FPGA Dino Game
+FPGA VGA Game - Dino Game
