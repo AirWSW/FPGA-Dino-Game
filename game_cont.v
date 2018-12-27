@@ -105,6 +105,7 @@ always @(posedge clk) begin
 		p <= 0;
 		q <= 0;
 		game_state <= 'b000;
+		level <= 'b00;
 		num3_disp_reg <= 'b0000;
 		num2_disp_reg <= 'b0000;
 		num1_disp_reg <= 'b0000;
